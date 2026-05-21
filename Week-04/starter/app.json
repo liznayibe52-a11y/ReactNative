@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "week04-zustand-fundacion",
+    "slug": "week04-zustand-Fundacion",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0d1117"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.bootcamp.week04zustand"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0d1117"
+      },
+      "package": "dev.bootcamp.week04zustand"
+    },
+    "newArchEnabled": true
+  }
+}
