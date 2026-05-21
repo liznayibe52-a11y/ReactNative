@@ -1,0 +1,25 @@
+// ============================================================
+// TYPES — src/types/index.ts
+// ============================================================
+// Define aquí la interfaz del elemento de tu dominio asignado.
+// Este type se usará en mockData.ts, ItemCard.tsx y HomeScreen.tsx
+// ============================================================
+
+// TODO: Renombra esta interfaz con el nombre de tu elemento
+// Ejemplos: Book, Medication, Member, Dish, Movie, Destination
+import { ImageSourcePropType } from 'react-native';
+export interface Foundation {
+  id: string;
+  name: string;
+  imageUri: ImageSourcePropType;
+  // TODO: Agrega las propiedades específicas de tu dominio
+  // Ejemplos:
+  //   Biblioteca → author: string; year: number;
+  //   Farmacia → activeIngredient: string; price: number;
+  //   Gimnasio → plan: string; expiresAt: string;
+  //   Restaurante → price: number; description: string;
+  description: string; // campo genérico de apoyo — personaliza según tu dominio
+  duration: string; 
+  registrations: number; 
+  state: string;
+}
