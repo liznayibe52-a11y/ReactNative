@@ -83,10 +83,6 @@ export function SavedScreen(): React.JSX.Element {
               <Text style={styles.sectionLabel}>
                 {items.length} guardado{items.length !== 1 ? 's' : ''}
               </Text>
-              {/* TODO: botón "Limpiar todo" usando clearAllBeneficiaries del store */}
-              <Pressable onPress={clearAllBeneficiaries} style={styles.clearButton}>
-                <Text style={styles.clearButtonText}>Limpiar todo</Text>
-              </Pressable>
             </View>
           ) : null
         }
@@ -95,11 +91,18 @@ export function SavedScreen(): React.JSX.Element {
             <Text style={styles.emptyIcon}>☆</Text>
             <Text style={styles.emptyTitle}>Sin guardados aún</Text>
             <Text style={styles.emptySubtitle}>
-              Ve a la lista principal y guarda tus ítems favoritos.
+              Ve a la lista principal y guarda tus ítems.
             </Text>
           </View>
         }
       />
+
+      {/* Botón "Limpiar todo" usando clearAllBeneficiaries del store */}
+      {items.length > 0 && (
+        <Pressable onPress={clearAllBeneficiaries} style={styles.clearButton}>
+          <Text style={styles.clearButtonText}>🗑 Limpiar todo</Text>
+        </Pressable>
+      )}
     </View>
   );
 }
@@ -130,11 +133,16 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   clearButton: {
-    padding: SPACING.xs,
+    margin: SPACING.md,
+    padding: SPACING.md,
+    backgroundColor: COLORS.error,
+    borderRadius: RADIUS.md,
+    alignItems: 'center',
   },
   clearButtonText: {
     ...TYPOGRAPHY.caption,
-    color: COLORS.error,
+    color: '#ffffff',
+    fontWeight: '600',
   },
   separator: {
     height: SPACING.sm,
